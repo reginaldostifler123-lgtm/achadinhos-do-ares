@@ -3,101 +3,227 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Achadinhos do Mercado Livre | Free Fire</title>
-<meta name="description" content="Vitrine de achadinhos Mercado Livre e envio de presentes Free Fire de forma legal.">
+<title>Achadinhos do Ares | Vitrine Escura</title>
+<meta name="description" content="Achadinhos e ofertas com links diretos para o Mercado Livre. Compra segura, legal e sem custo extra.">
 <style>
-*{box-sizing:border-box;}
-body{margin:0;font-family:Arial,sans-serif;background:#111;color:#eee;}
-header{background:linear-gradient(90deg,#0f0c29,#302b63,#24243e);padding:30px 15px;text-align:center;color:#fff;}
-header h1{margin:0;font-size:32px;font-weight:bold;}
-header p{margin-top:8px;font-size:16px;color:#ccc;}
-.container{max-width:1200px;margin:auto;padding:25px;}
-.aviso{background:#1c1c1c;border-left:6px solid #ffcc00;padding:18px;margin-bottom:30px;font-size:15px;border-radius:10px;color:#fff;}
-.aviso strong{color:#ffcc00;}
-.produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;}
-.produto{background:#1c1c1c;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,0.5);padding:18px;display:flex;flex-direction:column;transition:transform 0.3s;}
-.produto:hover{transform:translateY(-6px);}
-.produto img{width:100%;height:220px;object-fit:cover;border-radius:14px;margin-bottom:12px;background:#333;}
-.produto h3{margin:10px 0 8px;font-size:20px;color:#ffcc00;}
-.produto p{font-size:14px;line-height:1.5;flex-grow:1;color:#ccc;}
-.produto a{text-align:center;text-decoration:none;background:#ffcc00;color:#111;padding:16px;border-radius:12px;font-weight:bold;font-size:16px;margin-top:15px;transition:background 0.2s;}
-.produto a:hover{background:#e6b800;}
+  * { box-sizing: border-box; margin:0; padding:0; font-family: 'Arial', sans-serif; }
+  body {
+    background: #0f0f0f;
+    color: #f0f0f0;
+    line-height: 1.6;
+  }
+  header {
+    background: linear-gradient(90deg, #111111, #333333);
+    padding: 40px 20px;
+    text-align: center;
+    color: #00f2ff;
+    text-shadow: 0 0 8px #00f2ff;
+  }
+  header h1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+  }
+  header p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #b3e0ff;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+  }
+  .aviso {
+    background: #1a1a1a;
+    border-left: 6px solid #00f2ff;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #b3e0ff;
+  }
+  .aviso strong { color:#00f2ff; }
+  .produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  .produto {
+    background: #1a1a1a;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,255,255,0.3);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0,255,255,0.6);
+  }
+  .produto img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background: #333;
+  }
+  .produto h3 {
+    font-size: 20px;
+    color: #00f2ff;
+    margin: 15px;
+  }
+  .produto p {
+    font-size: 14px;
+    color: #ccc;
+    margin: 0 15px 15px 15px;
+    flex-grow:1;
+  }
+  .produto a {
+    display: block;
+    margin: 0 15px 15px 15px;
+    text-align: center;
+    padding: 15px 0;
+    background: #00f2ff;
+    color: #0f0f0f;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background 0.3s;
+  }
+  .produto a:hover {
+    background: #0077ff;
+    color: #fff;
+  }
+  footer {
+    background: #111;
+    color: #ccc;
+    padding: 25px 15px;
+    margin-top: 50px;
+    font-size: 13px;
+    text-align: center;
+  }
+  footer a {
+    color:#00f2ff;
+    text-decoration:underline;
+  }
+  /* BOTÃO DO TIKTOK */
+  .tiktok-btn {
+    text-align:center;
+    padding:40px;
+    background:#111;
+    color:#fff;
+    margin-top:50px;
+    border-radius:10px;
+  }
+  .tiktok-btn h2 { color:#00f2ff; margin-bottom:10px; }
+  .tiktok-btn p { color:#b3e0ff; margin-bottom:20px; }
+  .tiktok-btn a {
+    display:inline-block;
+    padding:15px 25px;
+    background:#00f2ff;
+    color:#0f0f0f;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    transition: background 0.3s;
+  }
+  .tiktok-btn a:hover {
+    background:#0077ff;
+    color:#fff;
+  }
 
-/* CHAT FLUTUANTE */
-#chatButton{position:fixed;bottom:30px;right:30px;background:#ffcc00;color:#111;border:none;padding:15px 18px;border-radius:50px;font-weight:bold;cursor:pointer;z-index:1000;box-shadow:0 4px 12px rgba(0,0,0,0.5);}
-#chatWindow{position:fixed;bottom:90px;right:30px;width:300px;max-height:400px;background:#1c1c1c;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,0.5);display:none;flex-direction:column;overflow:hidden;z-index:1000;}
-#chatHeader{background:#ffcc00;color:#111;padding:12px;font-weight:bold;text-align:center;}
-#chatMessages{flex-grow:1;padding:10px;overflow-y:auto;font-size:14px;}
-#chatInputContainer{display:flex;padding:10px;border-top:1px solid #444;}
-#chatInput{flex-grow:1;padding:8px;border-radius:8px;border:none;}
-#chatSend{background:#ffcc00;color:#111;border:none;padding:8px 12px;border-radius:8px;margin-left:5px;cursor:pointer;font-weight:bold;}
-.message{margin-bottom:8px;}
-.message.user{color:#ffcc00;text-align:right;}
-.message.bot{color:#ccc;text-align:left;}
+  /* CHAT FLUTUANTE */
+  #chatButton{position:fixed;bottom:30px;right:30px;background:#00f2ff;color:#0f0f0f;border:none;padding:15px 18px;border-radius:50px;font-weight:bold;cursor:pointer;z-index:1000;box-shadow:0 4px 12px rgba(0,0,0,0.5);}
+  #chatWindow{position:fixed;bottom:90px;right:30px;width:300px;max-height:400px;background:#1a1a1a;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,0.5);display:none;flex-direction:column;overflow:hidden;z-index:1000;}
+  #chatHeader{background:#00f2ff;color:#0f0f0f;padding:12px;font-weight:bold;text-align:center;}
+  #chatMessages{flex-grow:1;padding:10px;overflow-y:auto;font-size:14px;}
+  #chatInputContainer{display:flex;padding:10px;border-top:1px solid #444;}
+  #chatInput{flex-grow:1;padding:8px;border-radius:8px;border:none;}
+  #chatSend{background:#00f2ff;color:#0f0f0f;border:none;padding:8px 12px;border-radius:8px;margin-left:5px;cursor:pointer;font-weight:bold;}
+  .message{margin-bottom:8px;}
+  .message.user{color:#00f2ff;text-align:right;}
+  .message.bot{color:#ccc;text-align:left;}
 </style>
 </head>
 <body>
+
 <header>
-<h1>Achadinhos do Mercado Livre</h1>
-<p>Vitrine de achadinhos & envio de presentes Free Fire</p>
+  <h1>Achadinhos do Ares</h1>
+  <p>Uma vitrine de achadinhos • Links oficiais do Mercado Livre</p>
 </header>
 
 <div class="container">
-<div class="aviso">
-🔒 <strong>Transparência e legalidade:</strong><br>
-Todos os links levam para o <strong>Mercado Livre</strong> ou site de presentes Free Fire.<br>
-Podemos receber comissão, <strong>sem custo extra</strong>.
+  <div class="aviso">
+    🔒 <strong>Transparência e legalidade:</strong><br>
+    Este é um site de <strong>achadinhos</strong>. Todos os botões levam diretamente para o <strong>site oficial do Mercado Livre</strong>.<br>
+    Este site contém <strong>links de afiliado</strong>. Podemos receber uma comissão pela indicação, <strong>sem nenhum custo extra</strong> para você.
+  </div>
+
+  <section class="produtos">
+    <!-- PRODUTO 1 -->
+    <div class="produto">
+      <img src="https://via.placeholder.com/600x400" alt="Produto 1">
+      <h3>Produto Exemplo 1</h3>
+      <p>Espaço reservado para descrição curta do produto. Destaque benefícios reais.</p>
+      <a href="SEU_LINK_DE_AFILIADO_AQUI" target="_blank">🛒 COMPRAR NO MERCADO LIVRE</a>
+    </div>
+    <!-- PRODUTO 2 -->
+    <div class="produto">
+      <img src="https://via.placeholder.com/600x400" alt="Produto 2">
+      <h3>Produto Exemplo 2</h3>
+      <p>Espaço reservado para descrição curta do produto. Destaque benefícios reais.</p>
+      <a href="SEU_LINK_DE_AFILIADO_AQUI" target="_blank">🛒 COMPRAR NO MERCADO LIVRE</a>
+    </div>
+    <!-- PRODUTO 3 -->
+    <div class="produto">
+      <img src="https://via.placeholder.com/600x400" alt="Produto 3">
+      <h3>Produto Exemplo 3</h3>
+      <p>Espaço reservado para descrição curta do produto. Destaque benefícios reais.</p>
+      <a href="SEU_LINK_DE_AFILIADO_AQUI" target="_blank">🛒 COMPRAR NO MERCADO LIVRE</a>
+    </div>
+    <!-- PRODUTO 4 -->
+    <div class="produto">
+      <img src="https://via.placeholder.com/600x400" alt="Produto 4">
+      <h3>Produto Exemplo 4</h3>
+      <p>Espaço reservado para descrição curta do produto. Destaque benefícios reais.</p>
+      <a href="SEU_LINK_DE_AFILIADO_AQUI" target="_blank">🛒 COMPRAR NO MERCADO LIVRE</a>
+    </div>
+    <!-- PRODUTO 5: PRESENTE FREE FIRE -->
+    <div class="produto">
+      <img src="https://via.placeholder.com/600x400" alt="Presente Free Fire">
+      <h3>Envio de Presente Free Fire</h3>
+      <p>Envie presentes, passe elite e up de conta de forma legal dentro do jogo!</p>
+      <a href="SEU_LINK_DO_SITE_DO_FREEFIRE_AQUI" target="_blank">🎁 ENVIAR PRESENTE</a>
+    </div>
+  </section>
 </div>
 
-<section class="produtos">
-  <div class="produto">
-    <img src="https://via.placeholder.com/600x400" alt="Produto 1">
-    <h3>Produto Exemplo 1</h3>
-    <p>Descrição do produto.</p>
-    <a href="SEU_LINK_DE_AFILIADO_AQUI" target="_blank">🛒 COMPRAR NO MERCADO LIVRE</a>
-  </div>
-  <div class="produto">
-    <img src="https://via.placeholder.com/600x400" alt="Produto 2">
-    <h3>Produto Exemplo 2</h3>
-    <p>Descrição do produto.</p>
-    <a href="SEU_LINK_DE_AFILIADO_AQUI" target="_blank">🛒 COMPRAR NO MERCADO LIVRE</a>
-  </div>
-  <div class="produto">
-    <img src="https://via.placeholder.com/600x400" alt="Produto 3">
-    <h3>Produto Exemplo 3</h3>
-    <p>Descrição do produto.</p>
-    <a href="SEU_LINK_DE_AFILIADO_AQUI" target="_blank">🛒 COMPRAR NO MERCADO LIVRE</a>
-  </div>
-  <div class="produto">
-    <img src="https://via.placeholder.com/600x400" alt="Produto 4">
-    <h3>Envio de Presente Free Fire</h3>
-    <p>Envie presentes, passe elite e up de conta de forma legal!</p>
-    <a href="SEU_LINK_DO_SITE_DO_FREEFIRE_AQUI" target="_blank">🎁 ENVIAR PRESENTE</a>
-  </div>
-</section>
+<!-- BOTÃO DO TIKTOK -->
+<div class="tiktok-btn">
+  <h2>🎵 Fale comigo pelo TikTok</h2>
+  <p>Também tenho vitrine oficial no TikTok. Clique no botão para me visitar e ver os produtos.</p>
+  <a href="https://www.tiktok.com/@born_to_kili" target="_blank">👉 Meu TikTok (@born_to_kili)</a>
 </div>
 
 <!-- BOTÃO CHAT -->
 <button id="chatButton">💬 Fale comigo</button>
 <div id="chatWindow">
-<div id="chatHeader">Atendimento</div>
-<div id="chatMessages">
-<div class="message bot">Olá! Posso te ajudar com dúvidas sobre os achadinhos?</div>
-<div class="message bot">Para atendimento oficial, visite meu TikTok: <a href="https://tiktok.com/@born_to_kili" target="_blank">@born_to_kili</a></div>
-</div>
-<div id="chatInputContainer">
-<input type="text" id="chatInput" placeholder="Digite sua mensagem...">
-<button id="chatSend">Enviar</button>
-</div>
+  <div id="chatHeader">Atendimento</div>
+  <div id="chatMessages">
+    <div class="message bot">Olá! Posso te ajudar com dúvidas sobre os achadinhos?</div>
+    <div class="message bot">Para atendimento oficial, visite meu TikTok: <a href="https://tiktok.com/@born_to_kili" target="_blank">@born_to_kili</a></div>
+  </div>
+  <div id="chatInputContainer">
+    <input type="text" id="chatInput" placeholder="Digite sua mensagem...">
+    <button id="chatSend">Enviar</button>
+  </div>
 </div>
 
 <script>
-// Abrir/fechar chat
 const chatButton = document.getElementById('chatButton');
 const chatWindow = document.getElementById('chatWindow');
 chatButton.addEventListener('click',()=>{chatWindow.style.display = chatWindow.style.display==='flex'?'none':'flex';chatWindow.style.flexDirection='column';});
 
-// Enviar mensagem
 const chatInput = document.getElementById('chatInput');
 const chatSend = document.getElementById('chatSend');
 const chatMessages = document.getElementById('chatMessages');
@@ -112,7 +238,6 @@ chatSend.addEventListener('click',()=>{
   chatInput.value='';
   chatMessages.scrollTop = chatMessages.scrollHeight;
 
-  // Resposta automática
   const msgBot = document.createElement('div');
   msgBot.className='message bot';
   if(text.toLowerCase().includes('frete')) msgBot.textContent='Todos os envios seguem as políticas do Mercado Livre.';
@@ -125,9 +250,39 @@ chatSend.addEventListener('click',()=>{
 </script>
 
 <footer>
-<p>© 2026 Achadinhos do Mercado Livre • Proprietário responsável pelo conteúdo</p>
-<p>Não somos o Mercado Livre. Todas as compras e envios são realizados nos sites oficiais.</p>
-<p>Este site contém links de afiliado. Sem custo extra ao comprador.</p>
+  <p><strong>Achadinhos do Ares</strong> é um site independente de achadinhos e recomendações.</p>
+  <p>Não somos o Mercado Livre. Todas as compras são realizadas exclusivamente no site oficial do Mercado Livre.</p>
+  <p>Este site contém links de afiliado. Podemos receber comissão pela indicação, <strong>sem custo extra</strong> para o comprador.</p>
+  <p>🔒 Site informativo, seguro e transparente • Nenhum dado pessoal é coletado</p>
+  <p>
+    <a href="#termos">Termos de Uso</a> |
+    <a href="#privacidade">Política de Privacidade</a> |
+    <a href="#afiliados">Aviso de Afiliados</a>
+  </p>
+  <p>© 2026 - Achadinhos do Ares • Proprietário responsável pelo conteúdo</p>
 </footer>
+
+<!-- TERMOS DE USO -->
+<section id="termos" class="container">
+  <h2>Termos de Uso</h2>
+  <p>Ao acessar este site, você concorda que o conteúdo aqui apresentado é apenas informativo. O site Achadinhos do Ares atua como uma vitrine de recomendações e não realiza vendas diretas.</p>
+  <p>Os preços, prazos e condições são definidos exclusivamente pelo Mercado Livre, podendo ser alterados sem aviso prévio.</p>
+  <p>O envio de presentes Free Fire é realizado de forma legal dentro do jogo. Não há utilização de trapaças; todas as transações são entre contas dentro do sistema do jogo.</p>
+</section>
+
+<!-- POLÍTICA DE PRIVACIDADE -->
+<section id="privacidade" class="container">
+  <h2>Política de Privacidade</h2>
+  <p>Este site não coleta, armazena ou compartilha dados pessoais dos visitantes.</p>
+  <p>Ao clicar em um link de produto, o usuário é redirecionado para o site oficial do Mercado Livre ou sistema de presente Free Fire, que possuem suas próprias políticas de privacidade e segurança.</p>
+</section>
+
+<!-- AVISO DE AFILIADOS -->
+<section id="afiliados" class="container">
+  <h2>Aviso de Afiliados</h2>
+  <p>Achadinhos do Ares participa de programas de afiliados. Isso significa que podemos receber uma comissão por compras qualificadas realizadas através dos links deste site.</p>
+  <p>Essa comissão não gera nenhum custo adicional ao comprador e ajuda a manter o site ativo.</p>
+</section>
+
 </body>
 </html>
