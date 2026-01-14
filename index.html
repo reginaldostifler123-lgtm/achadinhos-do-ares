@@ -1,202 +1,133 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Achadinhos do Mercado Livre | Ofertas & Presentes Free Fire</title>
-  <meta name="description" content="Achadinhos e ofertas com links diretos para o Mercado Livre. Compra segura, legal e sem custo extra. Envio de presentes no Free Fire de forma oficial.">
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: #111;
-      color: #eee;
-    }
-    header {
-      background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
-      padding: 30px 15px;
-      text-align: center;
-      color: #fff;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-    header p {
-      margin-top: 8px;
-      font-size: 16px;
-      color: #ccc;
-    }
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 25px;
-    }
-    .aviso {
-      background: #1c1c1c;
-      border-left: 6px solid #ffcc00;
-      padding: 18px;
-      margin-bottom: 30px;
-      font-size: 15px;
-      border-radius: 10px;
-      color: #fff;
-    }
-    .aviso strong { color: #ffcc00; }
-    .produtos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
-    .produto {
-      background: #1c1c1c;
-      border-radius: 16px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
-      padding: 18px;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.3s;
-    }
-    .produto:hover { transform: translateY(-6px); }
-    .produto img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 14px;
-      margin-bottom: 12px;
-      background: #333;
-    }
-    .produto h3 {
-      margin: 10px 0 8px;
-      font-size: 20px;
-      color: #ffcc00;
-    }
-    .produto p {
-      font-size: 14px;
-      line-height: 1.5;
-      flex-grow: 1;
-      color: #ccc;
-    }
-    .produto a {
-      text-align: center;
-      text-decoration: none;
-      background: #ffcc00;
-      color: #111;
-      padding: 16px;
-      border-radius: 12px;
-      font-weight: bold;
-      font-size: 16px;
-      margin-top: 15px;
-      transition: background 0.2s;
-    }
-    .produto a:hover { background: #e6b800; }
-    .redirecionamentos {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 20px;
-      flex-wrap: wrap;
-    }
-    .redirecionamentos a {
-      display: inline-block;
-      text-decoration: none;
-      padding: 14px 20px;
-      background: #ffcc00;
-      color: #111;
-      font-weight: bold;
-      border-radius: 12px;
-      transition: background 0.2s;
-    }
-    .redirecionamentos a:hover { background: #e6b800; }
-    footer {
-      background: #000;
-      color: #888;
-      padding: 30px 15px;
-      margin-top: 50px;
-      font-size: 13px;
-      text-align: center;
-    }
-    footer a { color: #ffcc00; text-decoration: underline; }
-    section.container h2 { color: #ffcc00; margin-bottom: 10px; }
-    section.container p { color: #ccc; line-height: 1.6; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achadinhos do Mercado Livre | Free Fire</title>
+<meta name="description" content="Vitrine de achadinhos Mercado Livre e envio de presentes Free Fire de forma legal.">
+<style>
+*{box-sizing:border-box;}
+body{margin:0;font-family:Arial,sans-serif;background:#111;color:#eee;}
+header{background:linear-gradient(90deg,#0f0c29,#302b63,#24243e);padding:30px 15px;text-align:center;color:#fff;}
+header h1{margin:0;font-size:32px;font-weight:bold;}
+header p{margin-top:8px;font-size:16px;color:#ccc;}
+.container{max-width:1200px;margin:auto;padding:25px;}
+.aviso{background:#1c1c1c;border-left:6px solid #ffcc00;padding:18px;margin-bottom:30px;font-size:15px;border-radius:10px;color:#fff;}
+.aviso strong{color:#ffcc00;}
+.produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;}
+.produto{background:#1c1c1c;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,0.5);padding:18px;display:flex;flex-direction:column;transition:transform 0.3s;}
+.produto:hover{transform:translateY(-6px);}
+.produto img{width:100%;height:220px;object-fit:cover;border-radius:14px;margin-bottom:12px;background:#333;}
+.produto h3{margin:10px 0 8px;font-size:20px;color:#ffcc00;}
+.produto p{font-size:14px;line-height:1.5;flex-grow:1;color:#ccc;}
+.produto a{text-align:center;text-decoration:none;background:#ffcc00;color:#111;padding:16px;border-radius:12px;font-weight:bold;font-size:16px;margin-top:15px;transition:background 0.2s;}
+.produto a:hover{background:#e6b800;}
+
+/* CHAT FLUTUANTE */
+#chatButton{position:fixed;bottom:30px;right:30px;background:#ffcc00;color:#111;border:none;padding:15px 18px;border-radius:50px;font-weight:bold;cursor:pointer;z-index:1000;box-shadow:0 4px 12px rgba(0,0,0,0.5);}
+#chatWindow{position:fixed;bottom:90px;right:30px;width:300px;max-height:400px;background:#1c1c1c;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,0.5);display:none;flex-direction:column;overflow:hidden;z-index:1000;}
+#chatHeader{background:#ffcc00;color:#111;padding:12px;font-weight:bold;text-align:center;}
+#chatMessages{flex-grow:1;padding:10px;overflow-y:auto;font-size:14px;}
+#chatInputContainer{display:flex;padding:10px;border-top:1px solid #444;}
+#chatInput{flex-grow:1;padding:8px;border-radius:8px;border:none;}
+#chatSend{background:#ffcc00;color:#111;border:none;padding:8px 12px;border-radius:8px;margin-left:5px;cursor:pointer;font-weight:bold;}
+.message{margin-bottom:8px;}
+.message.user{color:#ffcc00;text-align:right;}
+.message.bot{color:#ccc;text-align:left;}
+</style>
 </head>
 <body>
-  <header>
-    <h1>Achadinhos do Mercado Livre</h1>
-    <p>Vitrine de achadinhos • Links oficiais do Mercado Livre • Envio de presentes Free Fire</p>
-  </header>
+<header>
+<h1>Achadinhos do Mercado Livre</h1>
+<p>Vitrine de achadinhos & envio de presentes Free Fire</p>
+</header>
 
-  <div class="container">
-    <div class="aviso">
-      🔒 <strong>Transparência e legalidade:</strong><br>
-      Este site é uma vitrine de achadinhos. Todos os links levam diretamente para o Mercado Livre.  
-      Recebemos comissão como afiliado, <strong>sem custo extra</strong> para você.
-    </div>
+<div class="container">
+<div class="aviso">
+🔒 <strong>Transparência e legalidade:</strong><br>
+Todos os links levam para o <strong>Mercado Livre</strong> ou site de presentes Free Fire.<br>
+Podemos receber comissão, <strong>sem custo extra</strong>.
+</div>
 
-    <section class="produtos">
-      <!-- Produto 1 -->
-      <div class="produto">
-        <img src="https://via.placeholder.com/600x400" alt="Produto 1">
-        <h3>Produto Exemplo 1</h3>
-        <p>Descrição curta do produto. Benefícios e destaque do item.</p>
-        <a href="SEU_LINK_DE_AFILIADO_AQUI" target="_blank">🛒 COMPRAR NO MERCADO LIVRE</a>
-      </div>
-
-      <!-- Produto 2 -->
-      <div class="produto">
-        <img src="https://via.placeholder.com/600x400" alt="Produto 2">
-        <h3>Produto Exemplo 2</h3>
-        <p>Descrição curta do produto. Benefícios e destaque do item.</p>
-        <a href="SEU_LINK_DE_AFILIADO_AQUI" target="_blank">🛒 COMPRAR NO MERCADO LIVRE</a>
-      </div>
-    </section>
-
-    <!-- Botões de redes / contato -->
-    <div class="redirecionamentos">
-      <a href="https://tiktok.com/@born_to_kili" target="_blank">TikTok</a>
-      <a href="SEU_LINK_DO_SITE_DE_PRESENTE_FREE_FIRE_AQUI" target="_blank">Presente Free Fire</a>
-    </div>
+<section class="produtos">
+  <div class="produto">
+    <img src="https://via.placeholder.com/600x400" alt="Produto 1">
+    <h3>Produto Exemplo 1</h3>
+    <p>Descrição do produto.</p>
+    <a href="SEU_LINK_DE_AFILIADO_AQUI" target="_blank">🛒 COMPRAR NO MERCADO LIVRE</a>
   </div>
+  <div class="produto">
+    <img src="https://via.placeholder.com/600x400" alt="Produto 2">
+    <h3>Produto Exemplo 2</h3>
+    <p>Descrição do produto.</p>
+    <a href="SEU_LINK_DE_AFILIADO_AQUI" target="_blank">🛒 COMPRAR NO MERCADO LIVRE</a>
+  </div>
+  <div class="produto">
+    <img src="https://via.placeholder.com/600x400" alt="Produto 3">
+    <h3>Produto Exemplo 3</h3>
+    <p>Descrição do produto.</p>
+    <a href="SEU_LINK_DE_AFILIADO_AQUI" target="_blank">🛒 COMPRAR NO MERCADO LIVRE</a>
+  </div>
+  <div class="produto">
+    <img src="https://via.placeholder.com/600x400" alt="Produto 4">
+    <h3>Envio de Presente Free Fire</h3>
+    <p>Envie presentes, passe elite e up de conta de forma legal!</p>
+    <a href="SEU_LINK_DO_SITE_DO_FREEFIRE_AQUI" target="_blank">🎁 ENVIAR PRESENTE</a>
+  </div>
+</section>
+</div>
 
-  <footer>
-    <p><strong>Achadinhos do Mercado Livre</strong> é um site independente de achadinhos e recomendações.</p>
-    <p>Não somos o Mercado Livre. Todas as compras são feitas no site oficial do Mercado Livre.</p>
-    <p>Este site contém links de afiliado. Podemos receber comissão pela indicação, <strong>sem custo extra</strong> para o comprador.</p>
-    <p>🔒 Site seguro, transparente e legal • Nenhum dado pessoal é coletado</p>
-    <p>
-      <a href="#termos">Termos de Uso</a> | 
-      <a href="#privacidade">Política de Privacidade</a> | 
-      <a href="#afiliados">Aviso de Afiliados</a>
-    </p>
-    <p>© 2026 - Achadinhos do Mercado Livre • Proprietário responsável pelo conteúdo</p>
-  </footer>
+<!-- BOTÃO CHAT -->
+<button id="chatButton">💬 Fale comigo</button>
+<div id="chatWindow">
+<div id="chatHeader">Atendimento</div>
+<div id="chatMessages">
+<div class="message bot">Olá! Posso te ajudar com dúvidas sobre os achadinhos?</div>
+<div class="message bot">Para atendimento oficial, visite meu TikTok: <a href="https://tiktok.com/@born_to_kili" target="_blank">@born_to_kili</a></div>
+</div>
+<div id="chatInputContainer">
+<input type="text" id="chatInput" placeholder="Digite sua mensagem...">
+<button id="chatSend">Enviar</button>
+</div>
+</div>
 
-  <!-- TERMOS DE USO -->
-  <section id="termos" class="container">
-    <h2>Termos de Uso</h2>
-    <p>Ao acessar este site, você concorda que o conteúdo aqui apresentado é apenas informativo. O site atua como vitrine de recomendações e não realiza vendas diretas.</p>
-    <p>Os preços, prazos e condições são definidos exclusivamente pelo Mercado Livre, podendo ser alterados sem aviso prévio.</p>
-    <p>💎 <strong>Envio de Presentes e Passe de Elite no Free Fire:</strong>  
-    O site oferece links para envio de presentes e upgrades de Passe de Elite dentro do Free Fire, de forma totalmente legal, usando recursos oficiais do próprio jogo.  
-    O proprietário do site não realiza compras de diamantes, hacks ou manipulações externas. Todas as ações ocorrem através do jogo, respeitando suas regras.  
-    Qualquer dúvida ou problema referente a esse serviço deve ser resolvido diretamente no jogo ou com o suporte oficial do Free Fire.</p>
-  </section>
+<script>
+// Abrir/fechar chat
+const chatButton = document.getElementById('chatButton');
+const chatWindow = document.getElementById('chatWindow');
+chatButton.addEventListener('click',()=>{chatWindow.style.display = chatWindow.style.display==='flex'?'none':'flex';chatWindow.style.flexDirection='column';});
 
-  <!-- POLÍTICA DE PRIVACIDADE -->
-  <section id="privacidade" class="container">
-    <h2>Política de Privacidade</h2>
-    <p>Este site não coleta, armazena ou compartilha dados pessoais dos visitantes.</p>
-    <p>Ao clicar em um link de produto, o usuário é redirecionado para o site oficial do Mercado Livre ou Free Fire, que possuem suas próprias políticas de privacidade e segurança.</p>
-  </section>
+// Enviar mensagem
+const chatInput = document.getElementById('chatInput');
+const chatSend = document.getElementById('chatSend');
+const chatMessages = document.getElementById('chatMessages');
 
-  <!-- AVISO DE AFILIADOS -->
-  <section id="afiliados" class="container">
-    <h2>Aviso de Afiliados</h2>
-    <p>O site participa de programas de afiliados. Podemos receber comissão por compras qualificadas realizadas através dos links deste site.</p>
-    <p>Essa comissão não gera nenhum custo adicional ao comprador e ajuda a manter o site ativo.</p>
-  </section>
+chatSend.addEventListener('click',()=>{
+  const text = chatInput.value.trim();
+  if(!text) return;
+  const msgUser = document.createElement('div');
+  msgUser.className='message user';
+  msgUser.textContent=text;
+  chatMessages.appendChild(msgUser);
+  chatInput.value='';
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+
+  // Resposta automática
+  const msgBot = document.createElement('div');
+  msgBot.className='message bot';
+  if(text.toLowerCase().includes('frete')) msgBot.textContent='Todos os envios seguem as políticas do Mercado Livre.';
+  else if(text.toLowerCase().includes('preço')) msgBot.textContent='Os preços são definidos pelo Mercado Livre.';
+  else if(text.toLowerCase().includes('free fire')) msgBot.innerHTML='Envio de presente é legal dentro do jogo. Para suporte oficial: <a href="https://tiktok.com/@born_to_kili" target="_blank">@born_to_kili</a>';
+  else msgBot.textContent='Obrigado pela mensagem! Para atendimento direto, acesse meu TikTok: @born_to_kili';
+  chatMessages.appendChild(msgBot);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+});
+</script>
+
+<footer>
+<p>© 2026 Achadinhos do Mercado Livre • Proprietário responsável pelo conteúdo</p>
+<p>Não somos o Mercado Livre. Todas as compras e envios são realizados nos sites oficiais.</p>
+<p>Este site contém links de afiliado. Sem custo extra ao comprador.</p>
+</footer>
 </body>
 </html>
