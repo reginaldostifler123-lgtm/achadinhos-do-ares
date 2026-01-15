@@ -7,10 +7,10 @@
 <title>Achadinhos do Ares | Ofertas Mercado Livre</title>
 
 <meta name="description" content="Achadinhos do Ares reúne ofertas confiáveis com links oficiais do Mercado Livre. Free Fire, tecnologia e promoções.">
-<meta name="keywords" content="achadinhos, mercado livre, afiliado, free fire, passe elite, ofertas, promoções">
+<meta name="keywords" content="achadinhos, mercado livre, afiliado, free fire, passe elite, ofertas">
 <meta name="author" content="Achadinhos do Ares">
+<meta name="robots" content="index, follow">
 
-<!-- OPEN GRAPH -->
 <meta property="og:title" content="Achadinhos do Ares">
 <meta property="og:description" content="Ofertas reais com links oficiais do Mercado Livre. Sem golpes.">
 <meta property="og:type" content="website">
@@ -18,10 +18,9 @@
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif;}
-body{background:#0f0f0f;color:#f0f0f0;}
+body{background:#0f0f0f;color:#f0f0f0;line-height:1.6;}
 a{text-decoration:none}
 
-/* HEADER */
 header{
 background:linear-gradient(90deg,#111,#333);
 padding:30px 15px;
@@ -31,20 +30,18 @@ color:#00f2ff;
 header h1{font-size:32px}
 header p{font-size:16px;color:#b3e0ff}
 
-/* CONTAINER */
 .container{max-width:1200px;margin:auto;padding:20px}
 
-/* AVISO */
 .aviso{
 background:#1a1a1a;
 border-left:6px solid #00f2ff;
-padding:15px;
+padding:18px;
 border-radius:10px;
 margin-bottom:30px;
 font-size:15px;
+color:#b3e0ff;
 }
 
-/* PRODUTOS */
 .produtos{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -64,7 +61,7 @@ height:200px;
 object-fit:cover;
 }
 .produto h3{color:#00f2ff;margin:15px}
-.produto p{color:#ccc;margin:0 15px 15px;font-size:14px}
+.produto p{color:#ccc;margin:0 15px 15px;font-size:14px;flex-grow:1}
 .produto a{
 margin:15px;
 padding:14px;
@@ -75,7 +72,6 @@ border-radius:10px;
 text-align:center;
 }
 
-/* CHAT */
 #chatButton{
 position:fixed;
 bottom:20px;
@@ -113,10 +109,7 @@ overflow-y:auto;
 font-size:14px;
 flex-grow:1;
 }
-#chatInputContainer{
-display:flex;
-padding:8px;
-}
+#chatInputContainer{display:flex;padding:8px}
 #chatInput{flex-grow:1;border-radius:8px;border:none;padding:8px}
 #chatSend{
 margin-left:5px;
@@ -126,24 +119,45 @@ padding:8px;
 border-radius:8px;
 }
 
-/* FOOTER */
+/* TABS TERMOS */
+.tabs{
+display:flex;
+gap:10px;
+margin-bottom:15px;
+flex-wrap:wrap;
+}
+.tab-btn{
+flex:1;
+padding:10px;
+border:none;
+border-radius:10px;
+background:#222;
+color:#00f2ff;
+font-weight:bold;
+cursor:pointer;
+}
+.tab-btn.active{
+background:#00f2ff;
+color:#0f0f0f;
+}
+.tab-content{
+display:none;
+color:#ccc;
+font-size:14px;
+}
+.tab-content.active{
+display:block;
+}
+
 footer{
 margin-top:40px;
 padding:20px;
-background:#111;
+background:#000;
 text-align:center;
 font-size:13px;
-}
-footer p a{
-display:inline-block;
-margin:8px;
-padding:14px 22px;
-border:2px solid #00f2ff;
-border-radius:30px;
-color:#00f2ff;
+color:#aaa;
 }
 
-/* MOBILE EXTRA */
 @media(max-width:480px){
 header h1{font-size:26px}
 .produto img{height:180px}
@@ -161,22 +175,70 @@ header h1{font-size:26px}
 <div class="container">
 
 <div class="aviso">
-🔒 Este site usa <strong>links oficiais de afiliado</strong>.  
-Você não paga nada a mais.
+🔒 <strong>Transparência:</strong><br>
+Este site contém <strong>links oficiais de afiliado</strong> do Mercado Livre.
 </div>
 
 <section class="produtos">
 
+<!-- PRODUTO FIXO -->
 <div class="produto">
 <a href="https://chat.whatsapp.com/CY8iUnyge1b84XSf8Qlzgz" target="_blank">
-<img src="https://i.imgur.com/GDWlai9.png">
+<img src="https://i.imgur.com/GDWlai9.png" loading="lazy">
 </a>
 <h3>Passe Elite Free Fire</h3>
-<p>Entre no grupo oficial e garanta o passe.</p>
+<p>Entre no grupo oficial e garanta seu Passe Elite Free Fire de forma legal e segura.</p>
 <a href="https://chat.whatsapp.com/CY8iUnyge1b84XSf8Qlzgz" target="_blank">🎁 ENTRAR NO GRUPO</a>
 </div>
 
+<!-- VITRINES LIVRES -->
+<div class="produto">
+<img src="https://via.placeholder.com/400x300?text=Produto+1">
+<h3>Produto Afiliado</h3>
+<p>Coloque aqui a descrição do produto.</p>
+<a href="#" target="_blank">🛒 VER NO MERCADO LIVRE</a>
+</div>
+
+<div class="produto">
+<img src="https://via.placeholder.com/400x300?text=Produto+2">
+<h3>Produto Afiliado</h3>
+<p>Coloque aqui a descrição do produto.</p>
+<a href="#" target="_blank">🛒 VER NO MERCADO LIVRE</a>
+</div>
+
+<div class="produto">
+<img src="https://via.placeholder.com/400x300?text=Produto+3">
+<h3>Produto Afiliado</h3>
+<p>Coloque aqui a descrição do produto.</p>
+<a href="#" target="_blank">🛒 VER NO MERCADO LIVRE</a>
+</div>
+
 </section>
+
+<!-- TERMOS COM BOTÕES -->
+<div class="info">
+  <div class="tabs">
+    <button class="tab-btn active" onclick="openTab('termos')">📄 Termos</button>
+    <button class="tab-btn" onclick="openTab('privacidade')">🔒 Privacidade</button>
+    <button class="tab-btn" onclick="openTab('afiliados')">💰 Afiliados</button>
+  </div>
+
+  <div id="termos" class="tab-content active">
+    <p>O site Achadinhos do Ares atua apenas como vitrine de recomendações.</p>
+    <p>Não realizamos vendas diretas. Todas as compras ocorrem no Mercado Livre.</p>
+  </div>
+
+  <div id="privacidade" class="tab-content">
+    <p>Este site não coleta dados pessoais.</p>
+    <p>Ao clicar nos links, você será redirecionado para plataformas oficiais.</p>
+  </div>
+
+  <div id="afiliados" class="tab-content">
+    <p>Podemos receber comissão por compras realizadas através dos links.</p>
+    <p>Isso não gera custo adicional para o comprador.</p>
+  </div>
+</div>
+
 </div>
 
 <button id="chatButton">💬 Chat</button>
@@ -184,7 +246,7 @@ Você não paga nada a mais.
 <div id="chatWindow">
 <div id="chatHeader">Atendimento</div>
 <div id="chatMessages">
-<div>Olá 👋 Como posso ajudar?</div>
+<div>Olá 👋 Trabalho apenas com links oficiais.</div>
 </div>
 <div id="chatInputContainer">
 <input id="chatInput" placeholder="Digite...">
@@ -192,39 +254,54 @@ Você não paga nada a mais.
 </div>
 </div>
 
-<script>
-const btn=document.getElementById("chatButton");
-const win=document.getElementById("chatWindow");
-const send=document.getElementById("chatSend");
-const input=document.getElementById("chatInput");
-const msgs=document.getElementById("chatMessages");
-
-btn.onclick=()=>win.style.display=win.style.display==="flex"?"none":"flex";
-
-send.onclick=()=>{
-let txt=input.value.toLowerCase();
-if(!txt)return;
-msgs.innerHTML+=`<div>Você: ${txt}</div>`;
-let resp="Posso te ajudar com ofertas do Mercado Livre 😉";
-
-if(txt.includes("free")) resp="Temos o Passe Elite Free Fire! Quer entrar no grupo?";
-if(txt.includes("preço")) resp="Os valores são direto no Mercado Livre.";
-if(txt.includes("ajuda")) resp="Me diga o que você procura.";
-
-msgs.innerHTML+=`<div>Bot: ${resp}</div>`;
-input.value="";
-msgs.scrollTop=msgs.scrollHeight;
-};
-</script>
-
 <footer>
-<p>
-<a href="#">Termos</a>
-<a href="#">Privacidade</a>
-<a href="#">Afiliados</a>
-</p>
-<p>© 2026 Achadinhos do Ares</p>
+<p>© 2026 Achadinhos do Ares • Site informativo</p>
 </footer>
+
+<script>
+const btn = document.getElementById("chatButton");
+const win = document.getElementById("chatWindow");
+const send = document.getElementById("chatSend");
+const input = document.getElementById("chatInput");
+const msgs = document.getElementById("chatMessages");
+
+btn.onclick = () => win.style.display = win.style.display === "flex" ? "none" : "flex";
+
+send.onclick = () => {
+  if (!input.value) return;
+  const userMsg = input.value;
+  msgs.innerHTML += `<div>Você: ${userMsg}</div>`;
+  input.value = "";
+
+  const msgLower = userMsg.toLowerCase();
+
+  let botResp = "Posso te ajudar com ofertas do Mercado Livre. Qual produto você procura?";
+
+  if (msgLower.includes("free fire") || msgLower.includes("passe elite")) {
+    // Mensagem com link direto do WhatsApp
+    botResp = `Temos o Passe Elite Free Fire! 🎮 Quer entrar no grupo oficial? <a href="https://chat.whatsapp.com/CY8iUnyge1b84XSf8Qlzgz" target="_blank">Clique aqui para entrar!</a>`;
+  } else if (msgLower.includes("preço") || msgLower.includes("valor")) {
+    botResp = "Os preços são definidos pelo Mercado Livre e podem variar conforme o produto.";
+  } else if (msgLower.includes("comprar") || msgLower.includes("como comprar")) {
+    botResp = "Clique nos links acima para comprar de forma segura pelo Mercado Livre.";
+  } else if (msgLower.includes("promoção") || msgLower.includes("oferta")) {
+    botResp = "Temos várias promoções de Free Fire e outros produtos. Confira os itens acima!";
+  } else if (msgLower.includes("ajuda") || msgLower.includes("suporte")) {
+    botResp = "Me diga qual produto você quer que eu te mostre!";
+  }
+
+  msgs.innerHTML += `<div>Bot: ${botResp}</div>`;
+  msgs.scrollTop = msgs.scrollHeight;
+};
+
+// FUNÇÃO DOS TABS
+function openTab(tabId) {
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(tabId).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
 
 </body>
 </html>
