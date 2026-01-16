@@ -119,7 +119,6 @@ padding:8px;
 border-radius:8px;
 }
 
-/* TABS TERMOS */
 .tabs{
 display:flex;
 gap:10px;
@@ -181,63 +180,68 @@ Este site contém <strong>links oficiais de afiliado</strong> do Mercado Livre.
 
 <section class="produtos">
 
-<!-- PRODUTO FIXO -->
+<!-- PASSE ELITE -->
 <div class="produto">
 <a href="https://chat.whatsapp.com/CY8iUnyge1b84XSf8Qlzgz" target="_blank">
-<img src="https://i.imgur.com/GDWlai9.png" loading="lazy">
+<img src="https://i.imgur.com/GDWlai9.png">
 </a>
 <h3>Passe Elite Free Fire</h3>
-<p>Entre no grupo oficial e garanta seu Passe Elite Free Fire de forma legal e segura.</p>
+<p>Entre no grupo oficial e garanta seu Passe Elite Free Fire.</p>
 <a href="https://chat.whatsapp.com/CY8iUnyge1b84XSf8Qlzgz" target="_blank">🎁 ENTRAR NO GRUPO</a>
 </div>
 
-<!-- VITRINES LIVRES -->
+<!-- PRODUTOS ANTIGOS -->
 <div class="produto">
 <img src="https://via.placeholder.com/400x300?text=Produto+1">
 <h3>Produto Afiliado</h3>
 <p>Coloque aqui a descrição do produto.</p>
-<a href="#" target="_blank">🛒 VER NO MERCADO LIVRE</a>
+<a href="#">🛒 VER NO MERCADO LIVRE</a>
 </div>
 
 <div class="produto">
 <img src="https://via.placeholder.com/400x300?text=Produto+2">
 <h3>Produto Afiliado</h3>
 <p>Coloque aqui a descrição do produto.</p>
-<a href="#" target="_blank">🛒 VER NO MERCADO LIVRE</a>
+<a href="#">🛒 VER NO MERCADO LIVRE</a>
 </div>
 
 <div class="produto">
 <img src="https://via.placeholder.com/400x300?text=Produto+3">
 <h3>Produto Afiliado</h3>
 <p>Coloque aqui a descrição do produto.</p>
-<a href="#" target="_blank">🛒 VER NO MERCADO LIVRE</a>
+<a href="#">🛒 VER NO MERCADO LIVRE</a>
+</div>
+
+<!-- NOVAS VITRINES FREE FIRE -->
+<div class="produto">
+<img src="https://via.placeholder.com/400x300?text=Free+Fire+520+Diamantes">
+<h3>Free Fire – 520 Diamantes</h3>
+<p>Gift card digital oficial.</p>
+<a href="https://lista.mercadolivre.com.br/free-fire-520-diamantes" target="_blank">🛒 VER NO MERCADO LIVRE</a>
+</div>
+
+<div class="produto">
+<img src="https://via.placeholder.com/400x300?text=Free+Fire+1060+Diamantes">
+<h3>Free Fire – 1.060 Diamantes</h3>
+<p>Créditos digitais para o jogo.</p>
+<a href="https://lista.mercadolivre.com.br/free-fire-1060-diamantes" target="_blank">🛒 VER NO MERCADO LIVRE</a>
+</div>
+
+<div class="produto">
+<img src="https://via.placeholder.com/400x300?text=Free+Fire+2180+Diamantes">
+<h3>Free Fire – 2.180 Diamantes</h3>
+<p>Ideal para eventos e skins.</p>
+<a href="https://lista.mercadolivre.com.br/free-fire-2180-diamantes" target="_blank">🛒 VER NO MERCADO LIVRE</a>
+</div>
+
+<div class="produto">
+<img src="https://via.placeholder.com/400x300?text=Free+Fire+5600+Diamantes">
+<h3>Free Fire – 5.600 Diamantes</h3>
+<p>Pacote avançado.</p>
+<a href="https://lista.mercadolivre.com.br/free-fire-5600-diamantes" target="_blank">🛒 VER NO MERCADO LIVRE</a>
 </div>
 
 </section>
-
-<!-- TERMOS COM BOTÕES -->
-<div class="info">
-  <div class="tabs">
-    <button class="tab-btn active" onclick="openTab('termos')">📄 Termos</button>
-    <button class="tab-btn" onclick="openTab('privacidade')">🔒 Privacidade</button>
-    <button class="tab-btn" onclick="openTab('afiliados')">💰 Afiliados</button>
-  </div>
-
-  <div id="termos" class="tab-content active">
-    <p>O site Achadinhos do Ares atua apenas como vitrine de recomendações.</p>
-    <p>Não realizamos vendas diretas. Todas as compras ocorrem no Mercado Livre.</p>
-  </div>
-
-  <div id="privacidade" class="tab-content">
-    <p>Este site não coleta dados pessoais.</p>
-    <p>Ao clicar nos links, você será redirecionado para plataformas oficiais.</p>
-  </div>
-
-  <div id="afiliados" class="tab-content">
-    <p>Podemos receber comissão por compras realizadas através dos links.</p>
-    <p>Isso não gera custo adicional para o comprador.</p>
-  </div>
-</div>
 
 </div>
 
@@ -255,52 +259,29 @@ Este site contém <strong>links oficiais de afiliado</strong> do Mercado Livre.
 </div>
 
 <footer>
-<p>© 2026 Achadinhos do Ares • Site informativo</p>
+<p>© 2026 Achadinhos do Ares</p>
 </footer>
 
 <script>
-const btn = document.getElementById("chatButton");
-const win = document.getElementById("chatWindow");
-const send = document.getElementById("chatSend");
-const input = document.getElementById("chatInput");
-const msgs = document.getElementById("chatMessages");
+const btn=document.getElementById("chatButton");
+const win=document.getElementById("chatWindow");
+const send=document.getElementById("chatSend");
+const input=document.getElementById("chatInput");
+const msgs=document.getElementById("chatMessages");
 
-btn.onclick = () => win.style.display = win.style.display === "flex" ? "none" : "flex";
+btn.onclick=()=>win.style.display=win.style.display==="flex"?"none":"flex";
 
-send.onclick = () => {
-  if (!input.value) return;
-  const userMsg = input.value;
-  msgs.innerHTML += `<div>Você: ${userMsg}</div>`;
-  input.value = "";
-
-  const msgLower = userMsg.toLowerCase();
-
-  let botResp = "Posso te ajudar com ofertas do Mercado Livre. Qual produto você procura?";
-
-  if (msgLower.includes("free fire") || msgLower.includes("passe elite")) {
-    // Mensagem com link direto do WhatsApp
-    botResp = `Temos o Passe Elite Free Fire! 🎮 Quer entrar no grupo oficial? <a href="https://chat.whatsapp.com/CY8iUnyge1b84XSf8Qlzgz" target="_blank">Clique aqui para entrar!</a>`;
-  } else if (msgLower.includes("preço") || msgLower.includes("valor")) {
-    botResp = "Os preços são definidos pelo Mercado Livre e podem variar conforme o produto.";
-  } else if (msgLower.includes("comprar") || msgLower.includes("como comprar")) {
-    botResp = "Clique nos links acima para comprar de forma segura pelo Mercado Livre.";
-  } else if (msgLower.includes("promoção") || msgLower.includes("oferta")) {
-    botResp = "Temos várias promoções de Free Fire e outros produtos. Confira os itens acima!";
-  } else if (msgLower.includes("ajuda") || msgLower.includes("suporte")) {
-    botResp = "Me diga qual produto você quer que eu te mostre!";
-  }
-
-  msgs.innerHTML += `<div>Bot: ${botResp}</div>`;
-  msgs.scrollTop = msgs.scrollHeight;
+send.onclick=()=>{
+if(!input.value)return;
+let m=input.value.toLowerCase();
+msgs.innerHTML+=`<div>Você: ${input.value}</div>`;
+input.value="";
+let r="Qual produto você procura?";
+if(m.includes("free fire")||m.includes("passe"))
+r=`Passe Elite Free Fire 🎮 <a href="https://chat.whatsapp.com/CY8iUnyge1b84XSf8Qlzgz" target="_blank">Entrar no grupo</a>`;
+msgs.innerHTML+=`<div>Bot: ${r}</div>`;
+msgs.scrollTop=msgs.scrollHeight;
 };
-
-// FUNÇÃO DOS TABS
-function openTab(tabId) {
-  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById(tabId).classList.add('active');
-  event.target.classList.add('active');
-}
 </script>
 
 </body>
