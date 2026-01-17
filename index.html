@@ -1,206 +1,330 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<!-- =====================================================
+     METADADOS PRINCIPAIS
+===================================================== -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Achadinhos do Ares | Ofertas Mercado Livre</title>
+<title>Achadinhos do Ares | Ofertas Oficiais Mercado Livre</title>
 
-<meta name="description" content="Achadinhos do Ares reúne ofertas confiáveis com links oficiais do Mercado Livre. Free Fire, tecnologia e promoções.">
-<meta name="keywords" content="achadinhos, mercado livre, afiliado, free fire, passe elite, ofertas, promoções">
+<meta name="description" content="Achadinhos do Ares reúne ofertas confiáveis com links oficiais do Mercado Livre. Free Fire, Passe Elite, diamantes e promoções reais.">
+<meta name="keywords" content="achadinhos, mercado livre, afiliado, free fire, passe elite, diamantes, promoções, ofertas">
 <meta name="author" content="Achadinhos do Ares">
 
+<!-- =====================================================
+     OPEN GRAPH (REDES SOCIAIS)
+===================================================== -->
 <meta property="og:title" content="Achadinhos do Ares">
 <meta property="og:description" content="Ofertas reais com links oficiais do Mercado Livre. Sem golpes.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://i.imgur.com/GDWlai9.png">
 
+<!-- =====================================================
+     ESTILO GLOBAL
+===================================================== -->
 <style>
-*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif;}
-body{background:#0f0f0f;color:#f0f0f0;}
-a{text-decoration:none}
 
+/* =====================================================
+   RESET + BASE
+===================================================== */
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#0f0f0f;
+  color:#f0f0f0;
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  transition:0.3s;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
 header{
-background:linear-gradient(90deg,#111,#333);
-padding:30px 15px;
-text-align:center;
-color:#00f2ff;
+  background:linear-gradient(90deg,#111,#333);
+  padding:35px 20px;
+  text-align:center;
+  color:#00f2ff;
 }
-header h1{font-size:32px}
-header p{font-size:16px;color:#b3e0ff}
 
-.container{max-width:1200px;margin:auto;padding:20px}
+header h1{
+  font-size:34px;
+  letter-spacing:1px;
+}
 
+header p{
+  font-size:17px;
+  color:#b3e0ff;
+  margin-top:8px;
+}
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:20px;
+}
+
+/* =====================================================
+   AVISO LEGAL
+===================================================== */
 .aviso{
-background:#1a1a1a;
-border-left:6px solid #00f2ff;
-padding:15px;
-border-radius:10px;
-margin-bottom:30px;
-font-size:15px;
+  background:#1a1a1a;
+  border-left:6px solid #00f2ff;
+  padding:18px;
+  border-radius:12px;
+  margin-bottom:40px;
+  font-size:15px;
+  color:#b3e0ff;
 }
 
+/* =====================================================
+   GRID DE PRODUTOS
+===================================================== */
 .produtos{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
 }
+
+/* =====================================================
+   CARD DE PRODUTO
+===================================================== */
 .produto{
-background:#1a1a1a;
-border-radius:16px;
-overflow:hidden;
-box-shadow:0 0 12px rgba(0,255,255,.3);
-display:flex;
-flex-direction:column;
+  background:#1a1a1a;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 0 15px rgba(0,255,255,0.25);
+  display:flex;
+  flex-direction:column;
 }
+
 .produto img{
-width:100%;
-height:200px;
-object-fit:cover;
+  width:100%;
+  height:210px;
+  object-fit:cover;
+  background:#000;
 }
-.produto h3{color:#00f2ff;margin:15px}
-.produto p{color:#ccc;margin:0 15px 15px;font-size:14px}
+
+.produto h3{
+  color:#00f2ff;
+  margin:15px;
+  font-size:20px;
+}
+
+.produto p{
+  color:#ccc;
+  margin:0 15px 15px;
+  font-size:14px;
+  flex-grow:1;
+}
+
 .produto a{
-margin:15px;
-padding:14px;
-background:#00f2ff;
-color:#0f0f0f;
-font-weight:bold;
-border-radius:10px;
-text-align:center;
+  margin:15px;
+  padding:14px;
+  background:#00f2ff;
+  color:#0f0f0f;
+  font-weight:bold;
+  border-radius:10px;
+  text-align:center;
 }
 
+.produto a:hover{
+  background:#0077ff;
+  color:#fff;
+}
+
+/* =====================================================
+   BOTÃO CHAT
+===================================================== */
 #chatButton{
-position:fixed;
-bottom:20px;
-right:20px;
-padding:15px;
-border-radius:50px;
-background:#00f2ff;
-border:none;
-font-weight:bold;
-z-index:999;
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  padding:16px 18px;
+  border-radius:50px;
+  background:#00f2ff;
+  border:none;
+  font-weight:bold;
+  cursor:pointer;
+  z-index:999;
 }
+
+/* =====================================================
+   JANELA CHAT
+===================================================== */
 #chatWindow{
-position:fixed;
-bottom:80px;
-right:20px;
-width:280px;
-max-height:380px;
-background:#1a1a1a;
-border-radius:16px;
-display:none;
-flex-direction:column;
-overflow:hidden;
-z-index:999;
+  position:fixed;
+  bottom:85px;
+  right:20px;
+  width:300px;
+  max-height:420px;
+  background:#1a1a1a;
+  border-radius:18px;
+  display:none;
+  flex-direction:column;
+  overflow:hidden;
+  z-index:999;
+  box-shadow:0 6px 20px rgba(0,0,0,0.6);
 }
+
 #chatHeader{
-background:#00f2ff;
-color:#0f0f0f;
-padding:10px;
-text-align:center;
-font-weight:bold;
+  background:#00f2ff;
+  color:#0f0f0f;
+  padding:12px;
+  text-align:center;
+  font-weight:bold;
 }
+
 #chatMessages{
-padding:10px;
-overflow-y:auto;
-font-size:14px;
-flex-grow:1;
+  padding:12px;
+  overflow-y:auto;
+  font-size:14px;
+  flex-grow:1;
 }
-#chatInputContainer{display:flex;padding:8px}
-#chatInput{flex-grow:1;border-radius:8px;border:none;padding:8px}
+
+#chatInputContainer{
+  display:flex;
+  padding:10px;
+  border-top:1px solid #333;
+}
+
+#chatInput{
+  flex-grow:1;
+  border-radius:8px;
+  border:none;
+  padding:8px;
+}
+
 #chatSend{
-margin-left:5px;
-background:#00f2ff;
-border:none;
-padding:8px;
-border-radius:8px;
+  margin-left:6px;
+  background:#00f2ff;
+  border:none;
+  padding:8px 12px;
+  border-radius:8px;
+  font-weight:bold;
+  cursor:pointer;
 }
 
+/* =====================================================
+   FOOTER
+===================================================== */
 footer{
-margin-top:40px;
-padding:20px;
-background:#111;
-text-align:center;
-font-size:13px;
-}
-footer p a{
-display:inline-block;
-margin:8px;
-padding:14px 22px;
-border:2px solid #00f2ff;
-border-radius:30px;
-color:#00f2ff;
+  margin-top:60px;
+  padding:30px 15px;
+  background:#111;
+  text-align:center;
+  font-size:13px;
+  color:#ccc;
 }
 
-@media(max-width:480px){
-header h1{font-size:26px}
-.produto img{height:180px}
+footer p a{
+  display:inline-block;
+  margin:10px;
+  padding:14px 26px;
+  border:2px solid #00f2ff;
+  border-radius:30px;
+  color:#00f2ff;
+  font-weight:bold;
 }
+
+footer p a:hover{
+  background:#00f2ff;
+  color:#0f0f0f;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+@media(max-width:480px){
+  header h1{font-size:26px}
+  .produto img{height:180px}
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- =====================================================
+     HEADER
+===================================================== -->
 <header>
-<h1>Achadinhos do Ares</h1>
-<p>Links oficiais • Sem golpes • Mercado Livre</p>
+  <h1>Achadinhos do Ares</h1>
+  <p>Links oficiais • Sem golpes • Mercado Livre</p>
 </header>
 
+<!-- =====================================================
+     CONTEÚDO
+===================================================== -->
 <div class="container">
 
 <div class="aviso">
 🔒 Este site usa <strong>links oficiais de afiliado</strong>.  
-Você não paga nada a mais.
+Você não paga nada a mais e compra direto no Mercado Livre.
 </div>
 
 <section class="produtos">
 
 <!-- PASSE ELITE -->
 <div class="produto">
-<img src="https://via.placeholder.com/400x300/111/00f2ff?text=PASSE+ELITE+FREE+FIRE">
+<a href="https://chat.whatsapp.com/CY8iUnyge1b84XSf8Qlzgz" target="_blank">
+<img src="https://i.imgur.com/GDWlai9.png" alt="Passe Elite Free Fire">
+</a>
 <h3>Passe Elite Free Fire</h3>
-<p>Entre no grupo oficial e garanta o passe.</p>
+<p>Entre no grupo oficial e garanta seu Passe Elite com segurança.</p>
 <a href="https://chat.whatsapp.com/CY8iUnyge1b84XSf8Qlzgz" target="_blank">
 🎁 ENTRAR NO GRUPO
 </a>
 </div>
 
-<!-- 520 DIAMANTES -->
+<!-- 520 -->
 <div class="produto">
-<img src="https://via.placeholder.com/400x300/111/ffffff?text=FREE+FIRE+520+DIAMANTES">
-<h3>Free Fire – 520 Diamantes</h3>
-<p>Gift card digital oficial para resgatar diamantes.</p>
+<img src="https://via.placeholder.com/400x300/111/ffffff?text=520+DIAMANTES">
+<h3>520 Diamantes</h3>
+<p>Gift card digital oficial.</p>
 <a href="https://mercadolivre.com/sec/11zoZvM" target="_blank">
 🛒 VER NO MERCADO LIVRE
 </a>
 </div>
 
-<!-- 1060 DIAMANTES -->
+<!-- 1060 -->
 <div class="produto">
-<img src="https://via.placeholder.com/400x300/111/ffffff?text=FREE+FIRE+1060+DIAMANTES">
-<h3>Free Fire – 1.060 Diamantes</h3>
-<p>Créditos digitais com resgate direto no jogo.</p>
+<img src="https://via.placeholder.com/400x300/111/ffffff?text=1060+DIAMANTES">
+<h3>1.060 Diamantes</h3>
+<p>Resgate direto no jogo.</p>
 <a href="https://mercadolivre.com/sec/2nuFAnZ" target="_blank">
 🛒 VER NO MERCADO LIVRE
 </a>
 </div>
 
-<!-- 2180 DIAMANTES -->
+<!-- 2180 -->
 <div class="produto">
-<img src="https://via.placeholder.com/400x300/111/ffffff?text=FREE+FIRE+2180+DIAMANTES">
-<h3>Free Fire – 2.180 Diamantes</h3>
-<p>Ideal para skins, passes e eventos especiais.</p>
+<img src="https://via.placeholder.com/400x300/111/ffffff?text=2180+DIAMANTES">
+<h3>2.180 Diamantes</h3>
+<p>Ideal para eventos e skins.</p>
 <a href="https://mercadolivre.com/sec/2gJ697f" target="_blank">
 🛒 VER NO MERCADO LIVRE
 </a>
 </div>
 
-<!-- 5600 DIAMANTES -->
+<!-- 5600 -->
 <div class="produto">
-<img src="https://via.placeholder.com/400x300/111/ffffff?text=FREE+FIRE+5600+DIAMANTES">
-<h3>Free Fire – 5.600 Diamantes</h3>
-<p>Pacote grande de diamantes.</p>
+<img src="https://via.placeholder.com/400x300/111/ffffff?text=5600+DIAMANTES">
+<h3>5.600 Diamantes</h3>
+<p>Pacote grande e econômico.</p>
 <a href="https://mercadolivre.com/sec/2gHX5Xq" target="_blank">
 🛒 VER NO MERCADO LIVRE
 </a>
@@ -209,17 +333,20 @@ Você não paga nada a mais.
 </section>
 </div>
 
+<!-- =====================================================
+     CHAT
+===================================================== -->
 <button id="chatButton">💬 Chat</button>
 
 <div id="chatWindow">
-<div id="chatHeader">Atendimento</div>
-<div id="chatMessages">
-<div>Olá 👋 Como posso ajudar?</div>
-</div>
-<div id="chatInputContainer">
-<input id="chatInput" placeholder="Digite...">
-<button id="chatSend">Enviar</button>
-</div>
+  <div id="chatHeader">Atendimento</div>
+  <div id="chatMessages">
+    <div>Olá 👋 Posso te ajudar?</div>
+  </div>
+  <div id="chatInputContainer">
+    <input id="chatInput" placeholder="Digite...">
+    <button id="chatSend">Enviar</button>
+  </div>
 </div>
 
 <script>
@@ -232,26 +359,31 @@ const msgs=document.getElementById("chatMessages");
 btn.onclick=()=>win.style.display=win.style.display==="flex"?"none":"flex";
 
 send.onclick=()=>{
-let txt=input.value.toLowerCase();
-if(!txt)return;
-msgs.innerHTML+=`<div>Você: ${txt}</div>`;
-let resp="Posso te ajudar com ofertas do Mercado Livre 😉";
+  let txt=input.value.toLowerCase();
+  if(!txt) return;
 
-if(txt.includes("free")) resp="Temos diamantes e Passe Elite Free Fire!";
-if(txt.includes("preço")) resp="Os valores estão direto no Mercado Livre.";
-if(txt.includes("ajuda")) resp="Me diga qual pacote você quer.";
+  msgs.innerHTML+=`<div><strong>Você:</strong> ${txt}</div>`;
 
-msgs.innerHTML+=`<div>Bot: ${resp}</div>`;
-input.value="";
-msgs.scrollTop=msgs.scrollHeight;
+  let resp="Posso te ajudar com Free Fire ou Mercado Livre 😉";
+
+  if(txt.includes("passe")) resp="Temos o Passe Elite! Quer entrar no grupo?";
+  if(txt.includes("diamante")) resp="Temos pacotes de 520 até 5600 diamantes.";
+  if(txt.includes("preço")) resp="Os valores são os oficiais do Mercado Livre.";
+
+  msgs.innerHTML+=`<div><strong>Bot:</strong> ${resp}</div>`;
+  input.value="";
+  msgs.scrollTop=msgs.scrollHeight;
 };
 </script>
 
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 <footer>
 <p>
-<a href="#">Termos</a>
-<a href="#">Privacidade</a>
-<a href="#">Afiliados</a>
+<a href="#termos">Termos</a>
+<a href="#privacidade">Privacidade</a>
+<a href="#afiliados">Afiliados</a>
 </p>
 <p>© 2026 Achadinhos do Ares</p>
 </footer>
